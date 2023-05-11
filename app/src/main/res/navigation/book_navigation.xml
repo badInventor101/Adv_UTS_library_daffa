@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.example.advuts_160420152_library.view.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/actionBookDetail"
+            app:destination="@id/bookDetailFragment" />
+        <argument
+            android:name="par_id"
+            app:argType="string"
+            android:defaultValue="def" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.advuts_160420152_library.view.BookDetailFragment"
+        android:label="fragment_book_detail"
+        tools:layout="@layout/fragment_book_detail" >
+        <argument
+            android:name="book_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemGenre"
+        android:name="com.example.advuts_160420152_library.view.GenreListFragment"
+        android:label="fragment_genre_list"
+        tools:layout="@layout/fragment_genre_list" >
+        <action
+            android:id="@+id/actionGenreToHome"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemAuthor"
+        android:name="com.example.advuts_160420152_library.view.AuthorListFragment"
+        android:label="fragment_author_list"
+        tools:layout="@layout/fragment_author_list" >
+        <action
+            android:id="@+id/actionAuthorToHome"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemLocation"
+        android:name="com.example.advuts_160420152_library.view.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/itemLanguage"
+        android:name="com.example.advuts_160420152_library.view.LanguageListFragment"
+        android:label="fragment_language_list"
+        tools:layout="@layout/fragment_language_list" >
+        <action
+            android:id="@+id/actionLanguageToHome"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDate"
+        android:name="com.example.advuts_160420152_library.view.DateListFragment"
+        android:label="fragment_date_list"
+        tools:layout="@layout/fragment_date_list" >
+        <action
+            android:id="@+id/actionDateToHome"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemRating"
+        android:name="com.example.advuts_160420152_library.view.RatingListFragment"
+        android:label="fragment_rating_list"
+        tools:layout="@layout/fragment_rating_list" >
+        <action
+            android:id="@+id/actionRatingToHome"
+            app:destination="@id/itemHome" />
+    </fragment>
+</navigation>
